@@ -72,6 +72,9 @@ class JitsiMeetPluginActivity : JitsiMeetActivity() {
     override fun onConferenceWillJoin(data: HashMap<String, Any>) {
         Log.d(JITSI_PLUGIN_TAG, String.format("JitsiMeetPluginActivity.onConferenceWillJoin: %s", data))
         JitsiMeetEventStreamHandler.instance.onConferenceWillJoin(data)
+        if (getJitsiView() != null) {
+            getJitsiView().enterPictureInPicture()
+        }
         super.onConferenceWillJoin(data)
     }
 
