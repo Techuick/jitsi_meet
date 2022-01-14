@@ -70,7 +70,7 @@ class JitsiViewController: UIViewController {
             builder.userInfo = self.jistiMeetUserInfo
             builder.setAudioOnly(self.audioOnly ?? false)
             builder.setAudioMuted(self.audioMuted ?? false)
-            builder.setVideoMuted(self.videoMuted ?? false)
+            builder.videoMuted = self.videoMuted ?? false
             builder.token = self.token
             
             self.featureFlags?.forEach{ key,value in
