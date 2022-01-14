@@ -39,7 +39,7 @@ class JitsiViewController: UIViewController {
     override func viewDidLoad() {
         
         //print("VIEW DID LOAD")
-        self.view.backgroundColor = .black
+        self.view.backgroundColor = .clear
         super.viewDidLoad()
     }
     
@@ -90,7 +90,7 @@ class JitsiViewController: UIViewController {
         // animate in
         jitsiMeetView.alpha = 0
         pipViewCoordinator?.show()
-//         pipViewCoordinator?.enterPictureInPicture()
+        pipViewCoordinator?.enterPictureInPicture()
     }
     
     func closeJitsiMeeting(){
