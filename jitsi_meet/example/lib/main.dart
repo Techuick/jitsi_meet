@@ -243,7 +243,7 @@ class _MeetingState extends State<Meeting> {
         featureFlags[FeatureFlagEnum.CALL_INTEGRATION_ENABLED] = false;
       } else if (Platform.isIOS) {
         // Disable PIP on iOS as it looks weird
-        featureFlags[FeatureFlagEnum.PIP_ENABLED] = false;
+        featureFlags[FeatureFlagEnum.PIP_ENABLED] = true;
       }
     }
     // Define meetings options here
