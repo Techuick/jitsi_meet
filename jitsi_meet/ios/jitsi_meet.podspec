@@ -13,7 +13,7 @@ Jitsi Meet Plugin
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :git => "https://github.com/Techuick/jitsi-meet-ios-sdk-releases", :branch => "master",
-                                            :tag => '4.1.1' }
+                                            :tag => '4.1.3' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
   s.dependency 'JitsiMeetSDK'
