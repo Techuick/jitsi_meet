@@ -73,7 +73,7 @@ class JitsiMeetPluginActivity : JitsiMeetActivity() {
         Log.d(JITSI_PLUGIN_TAG, String.format("JitsiMeetPluginActivity.onConferenceWillJoin: %s", data))
         JitsiMeetEventStreamHandler.instance.onConferenceWillJoin(data)
         if (getJitsiView() != null) {
-            getJitsiView().enterPictureInPicture()
+//            getJitsiView().enterPictureInPicture()
         }
         super.onConferenceWillJoin(data)
     }

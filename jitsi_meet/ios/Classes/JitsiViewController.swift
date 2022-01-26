@@ -72,7 +72,8 @@ class JitsiViewController: UIViewController {
             builder.setAudioMuted(self.audioMuted ?? false)
             builder.setVideoMuted(self.videoMuted ?? false)
             builder.token = self.token
-            
+//             builder.setConfigOverride("TOOLBAR_BUTTONS", arrayOf("camera", "microphone"))
+
             self.featureFlags?.forEach{ key,value in
                 builder.setFeatureFlag(key, withValue: value);
             }
