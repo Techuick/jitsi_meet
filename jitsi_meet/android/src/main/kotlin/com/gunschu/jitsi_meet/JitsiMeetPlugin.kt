@@ -136,7 +136,7 @@ public class JitsiMeetPlugin() : FlutterPlugin, MethodCallHandler, ActivityAware
                 .setAudioOnly(call.argument("audioOnly") ?: false)
                 .setVideoMuted(call.argument("videoMuted") ?: false)
                 .setUserInfo(userInfo)
-                .setFeatureFlag("overflow-menu.enabled", call.argument("overflowMenuEnabled") ?: false)
+                .setFeatureFlag("overflow-menu.enabled", call.argument("overflowMenuEnabled") ?: true)
 
         // Add feature flags into options, reading given Map
         if (call.argument<HashMap<String, Any>?>("featureFlags") != null) {

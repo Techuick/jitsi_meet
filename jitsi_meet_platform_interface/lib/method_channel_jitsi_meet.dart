@@ -46,6 +46,7 @@ class MethodChannelJitsiMeet extends JitsiMeetPlatform {
       'audioOnly': options.audioOnly,
       'videoMuted': options.videoMuted,
       'featureFlags': options.getFeatureFlags(),
+      'overflowMenuEnabled': options.overflowMenuEnabled,
       'userDisplayName': options.userDisplayName,
       'userEmail': options.userEmail,
       'iosAppBarRGBAColor': options.iosAppBarRGBAColor,
