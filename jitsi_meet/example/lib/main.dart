@@ -256,7 +256,7 @@ class _MeetingState extends State<Meeting> {
       ..audioOnly = isAudioOnly
       ..audioMuted = isAudioMuted
       ..videoMuted = isVideoMuted
-      ..overflowMenuEnabled = false
+      ..overflowMenuEnabled = true
       ..featureFlags.addAll(featureFlags)
       ..webOptions = {
         "roomName": roomText.text,
