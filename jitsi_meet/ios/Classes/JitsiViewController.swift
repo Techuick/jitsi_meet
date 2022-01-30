@@ -15,6 +15,7 @@ class JitsiViewController: UIViewController {
     var audioOnly:Bool? = false
     var audioMuted: Bool? = false
     var videoMuted: Bool? = false
+    var overflowMenuEnabled: Bool? = false
     var token:String? = nil
     var featureFlags: Dictionary<String, Any>? = Dictionary();
     
@@ -71,6 +72,7 @@ class JitsiViewController: UIViewController {
             builder.setAudioOnly(self.audioOnly ?? false)
             builder.setAudioMuted(self.audioMuted ?? false)
             builder.setVideoMuted(self.videoMuted ?? false)
+            builder.setFeatureFlag("overflow-menu.enabled", withValue: self.overflowMenuEnabled ?? true)
             builder.token = self.token
 //             builder.setConfigOverride("TOOLBAR_BUTTONS", arrayOf("camera", "microphone"))
 
@@ -91,7 +93,7 @@ class JitsiViewController: UIViewController {
         // animate in
         jitsiMeetView.alpha = 0
         pipViewCoordinator?.show()
-        pipViewCoordinator?.enterPictureInPicture()
+//         pipViewCoordinator?.enterPictureInPicture()
     }
     
     func closeJitsiMeeting(){

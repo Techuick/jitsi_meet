@@ -30,6 +30,7 @@ class _MeetingState extends State<Meeting> {
   bool? isAudioOnly = true;
   bool? isAudioMuted = true;
   bool? isVideoMuted = true;
+  bool? isOverflowMenuHidden = true;
 
   @override
   void initState() {
@@ -181,6 +182,14 @@ class _MeetingState extends State<Meeting> {
             value: isVideoMuted,
             onChanged: _onVideoMutedChanged,
           ),
+          SizedBox(
+            height: 14.0,
+          ),
+          CheckboxListTile(
+            title: Text("Overflow menu hidden"),
+            value: isOverflowMenuHidden,
+            onChanged: _onOverFlowVisibilityChanged,
+          ),
           Divider(
             height: 48.0,
             thickness: 2.0,
@@ -222,6 +231,12 @@ class _MeetingState extends State<Meeting> {
   }
 
   _onVideoMutedChanged(bool? value) {
+    setState(() {
+      isVideoMuted = value;
+    });
+  }
+
+  _onOverFlowVisibilityChanged(bool? value) {
     setState(() {
       isVideoMuted = value;
     });
