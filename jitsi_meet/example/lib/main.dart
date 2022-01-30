@@ -186,7 +186,7 @@ class _MeetingState extends State<Meeting> {
             height: 14.0,
           ),
           CheckboxListTile(
-            title: Text("Overflow menu hidden"),
+            title: Text("Overflow Menu Visible"),
             value: isOverflowMenuHidden,
             onChanged: _onOverFlowVisibilityChanged,
           ),
@@ -238,7 +238,7 @@ class _MeetingState extends State<Meeting> {
 
   _onOverFlowVisibilityChanged(bool? value) {
     setState(() {
-      isVideoMuted = value;
+      isOverflowMenuHidden = value;
     });
   }
 
@@ -271,7 +271,7 @@ class _MeetingState extends State<Meeting> {
       ..audioOnly = isAudioOnly
       ..audioMuted = isAudioMuted
       ..videoMuted = isVideoMuted
-      ..overflowMenuEnabled = true
+      ..overflowMenuEnabled = isOverflowMenuHidden
       ..featureFlags.addAll(featureFlags)
       ..webOptions = {
         "roomName": roomText.text,

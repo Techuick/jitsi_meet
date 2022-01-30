@@ -15,7 +15,7 @@ class JitsiViewController: UIViewController {
     var audioOnly:Bool? = false
     var audioMuted: Bool? = false
     var videoMuted: Bool? = false
-    var overflowMenuEnabled: Bool? = false
+    var overflowMenuEnabled: Bool? = true
     var token:String? = nil
     var featureFlags: Dictionary<String, Any>? = Dictionary();
     
@@ -67,11 +67,11 @@ class JitsiViewController: UIViewController {
 //             builder.welcomePageEnabled = true
             builder.room = self.roomName
             builder.serverURL = self.serverUrl
-            builder.setSubject(self.subject ?? "")
+            builder.subject = self.subject ?? ""
             builder.userInfo = self.jistiMeetUserInfo
-            builder.setAudioOnly(self.audioOnly ?? false)
-            builder.setAudioMuted(self.audioMuted ?? false)
-            builder.setVideoMuted(self.videoMuted ?? false)
+            builder.audioOnly = self.audioOnly ?? false
+            builder.audioMuted = self.audioMuted ?? false
+            builder.videoMuted = self.videoMuted ?? false
             builder.setFeatureFlag("overflow-menu.enabled", withValue: self.overflowMenuEnabled ?? true)
             builder.token = self.token
 //             builder.setConfigOverride("TOOLBAR_BUTTONS", arrayOf("camera", "microphone"))

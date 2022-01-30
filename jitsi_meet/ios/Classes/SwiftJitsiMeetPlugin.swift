@@ -86,6 +86,13 @@ public class SwiftJitsiMeetPlugin: NSObject, FlutterPlugin, FlutterStreamHandler
                         self.jitsiViewController?.videoMuted = videoMutedBool;
                     }
 
+                    if let overflowMenuEnabled = myArgs["overflowMenuEnabled"] as? Int {
+                        print(myArgs)
+                        print("ssfdsdfsd")
+                        let overflowMenuEnabledBool = overflowMenuEnabled > 0 ? true : false
+                        self.jitsiViewController?.overflowMenuEnabled = overflowMenuEnabledBool;
+                    }
+
                     if let featureFlags = myArgs["featureFlags"] as? Dictionary<String, Any>
                     {
                         self.jitsiViewController?.featureFlags = featureFlags;
