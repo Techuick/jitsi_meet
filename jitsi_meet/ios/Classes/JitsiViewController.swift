@@ -64,7 +64,7 @@ class JitsiViewController: UIViewController {
         jitsiMeetView.delegate = self
         self.jitsiMeetView = jitsiMeetView
         let options = JitsiMeetConferenceOptions.fromBuilder { (builder) in
-//             builder.welcomePageEnabled = true
+            builder.welcomePageEnabled = true
             builder.room = self.roomName
             builder.serverURL = self.serverUrl
             builder.subject = self.subject ?? ""
@@ -74,7 +74,6 @@ class JitsiViewController: UIViewController {
             builder.videoMuted = self.videoMuted ?? false
             builder.setFeatureFlag("overflow-menu.enabled", withValue: self.overflowMenuEnabled ?? true)
             builder.token = self.token
-//             builder.setConfigOverride("TOOLBAR_BUTTONS", arrayOf("camera", "microphone"))
 
             self.featureFlags?.forEach{ key,value in
                 builder.setFeatureFlag(key, withValue: value);
