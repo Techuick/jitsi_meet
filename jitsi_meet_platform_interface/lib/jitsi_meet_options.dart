@@ -19,6 +19,8 @@ class JitsiMeetingOptions {
   String? userEmail;
   String? iosAppBarRGBAColor;
   String? userAvatarURL;
+  bool? audioButtonEnabled;
+  bool? videoButtonEnabled;
 
   Map<String, dynamic>? webOptions; // options for web
 

@@ -49,6 +49,8 @@ class MethodChannelJitsiMeet extends JitsiMeetPlatform {
       'userDisplayName': options.userDisplayName,
       'userEmail': options.userEmail,
       'iosAppBarRGBAColor': options.iosAppBarRGBAColor,
+      'audioButtonEnabled': options.audioButtonEnabled,
+      'videoButtonEnabled': options.videoButtonEnabled,
     };
 
     return await _channel

@@ -16,6 +16,8 @@ class JitsiViewController: UIViewController {
     var audioMuted: Bool? = false
     var videoMuted: Bool? = false
     var token:String? = nil
+    var videoButtonEnabled: Bool? = true;
+    var audioButtonEnabled: Bool? = true;
     var featureFlags: Dictionary<String, Any>? = Dictionary();
     
     
@@ -72,6 +74,8 @@ class JitsiViewController: UIViewController {
             builder.setAudioMuted(self.audioMuted ?? false)
             builder.setVideoMuted(self.videoMuted ?? false)
             builder.token = self.token
+            builder.setFeatureFlag("video-mute.enabled", withValue: self.videoButtonEnabled ?? true)
+            builder.setFeatureFlag("audio-mute.enabled", withValue: self.audioButtonEnabled ?? true)
             
             self.featureFlags?.forEach{ key,value in
                 builder.setFeatureFlag(key, withValue: value);
