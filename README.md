@@ -375,7 +375,5 @@ JitsiMeet.closeMeeting();
 
 <a name="contributing"></a>
 
-## Contributing
-Send a pull request with as much information as possible clearly
-describing the issue or feature. Keep changes small and for one issue at
-a time.
+## Contact
+Contact at "contact@techuick.com" if you need our services. We provide complete solutions for your problems
