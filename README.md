@@ -376,4 +376,4 @@ JitsiMeet.closeMeeting();
 <a name="contributing"></a>
 
 ## Contact
-Contact at "contact@techuick.com" if you need our services. We provide complete solutions for your problems
+Contact us at "contact@techuick.com" if you need our services. We provide complete solutions for your problems
