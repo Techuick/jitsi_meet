@@ -76,6 +76,16 @@ public class SwiftJitsiMeetPlugin: NSObject, FlutterPlugin, FlutterStreamHandler
                         self.jitsiViewController?.audioOnly = audioOnlyBool;
                     }
 
+                    if let audioButton = myArgs["audioButtonEnabled"] as? Int {
+                        let audioButtonBool = audioButton > 0 ? true : false
+                        self.jitsiViewController?.audioButtonEnabled = audioButtonBool;
+                    }
+
+                    if let videoButton = myArgs["videoButtonEnabled"] as? Int {
+                        let videoButtonBool = videoButton > 0 ? true : false
+                        self.jitsiViewController?.videoButtonEnabled = videoButtonBool;
+                    }
+
                     if let audioMuted = myArgs["audioMuted"] as? Int {
                         let audioMutedBool = audioMuted > 0 ? true : false
                         self.jitsiViewController?.audioMuted = audioMutedBool;
